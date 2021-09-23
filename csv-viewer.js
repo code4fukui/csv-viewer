@@ -12,6 +12,9 @@ const clear = (ele) => ele.innerHTML = "";
 
 const main = async (parent) => {
   const url = parent.getAttribute("src");
+  if (!url) {
+    return;
+  }
   const name = parent.getAttribute("name") || url;
 
   const csv = await CSV.fetch(url);
@@ -223,7 +226,24 @@ class CSVViewer extends HTMLElement {
   constructor() {
     super();
     main(this);
+    
+    //const config = { attributes: true, childList: true, subtree: true };
+    // must call setAttribute("src", url)
+    const config = { attributes: true, childList: false, subtree: false };
+    const callback = async (mlist, observer) => {
+      observer.disconnect();
+      //await this.init();
+      await main(this);
+      startObserver();
+    };
+    const startObserver = () => {
+      const observer = new MutationObserver(callback);
+      observer.observe(this, config);
+    };
+    startObserver();
   }
 }
 
 customElements.define("csv-viewer", CSVViewer);
+
+export { CSVViewer }
