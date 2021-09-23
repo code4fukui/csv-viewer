@@ -1392,7 +1392,14 @@ var _indexOfInstanceProperty = require("@babel/runtime-corejs3/core-js/instance/
 function _isNativeFunction(fn) {
   var _context;
   console.log("isnative", fn, Function);
-  return _indexOfInstanceProperty(_context = Function.toString.call(fn)).call(_context, "[native code]") !== -1;
+  try {
+    console.log(_indexOfInstanceProperty);
+    console.log(Function.toString.call(fn));
+    return _indexOfInstanceProperty(_context = Function.toString.call(fn)).call(_context, "[native code]") !== -1;
+  } catch (e) {
+    console.log(e);
+  }
+  return true;
 }
 
 module.exports = _isNativeFunction;
