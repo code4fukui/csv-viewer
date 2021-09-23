@@ -1153,7 +1153,9 @@ var CSVViewer = function (_HTMLElement) {
   return CSVViewer;
 }((0, _wrapNativeSuper2.default)(HTMLElement));
 
-customElements.define("csv-viewer", CSVViewer);
+if (window.customElements) {
+  customElements.define("csv-viewer", CSVViewer);
+}
 var cv = new CSVViewer();
 cv.setAttribute("src", "./test.csv");
 document.body.appendChild(cv);
