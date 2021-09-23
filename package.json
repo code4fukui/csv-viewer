@@ -1,0 +1,25 @@
+{
+  "name": "csv-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "csv-viewer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code4fukui/csv-viewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/code4fukui/csv-viewer/issues"
+  },
+  "homepage": "https://github.com/code4fukui/csv-viewer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
+  }
+}
