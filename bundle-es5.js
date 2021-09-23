@@ -362,8 +362,8 @@ CSV.fromJSON = function (json) {
   return res;
 };
 
-CSV.fetchOrLoad = function () {
-  var _ref = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee(fn) {
+CSV.fetchOrLoad = /*#__PURE__*/function () {
+  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(fn) {
     return _regenerator.default.wrap(function _callee$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -405,8 +405,8 @@ CSV.fetchOrLoad = function () {
   };
 }();
 
-CSV.fetchUtf8 = function () {
-  var _ref2 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee2(url) {
+CSV.fetchUtf8 = /*#__PURE__*/function () {
+  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(url) {
     var data, csv;
     return _regenerator.default.wrap(function _callee2$(_context3) {
       while (1) {
@@ -437,8 +437,8 @@ CSV.fetchUtf8 = function () {
   };
 }();
 
-CSV.fetch = function () {
-  var _ref3 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee3(url) {
+CSV.fetch = /*#__PURE__*/function () {
+  var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(url) {
     var data, csv;
     return _regenerator.default.wrap(function _callee3$(_context4) {
       while (1) {
@@ -675,7 +675,7 @@ var core = {
   reject: reject
 };
 
-var Moji = function () {
+var Moji = /*#__PURE__*/function () {
   function Moji(str1, mojisyu) {
     (0, _classCallCheck2.default)(this, Moji);
     this._str = str1;
@@ -828,8 +828,8 @@ var clear = function clear(ele) {
   return ele.innerHTML = "";
 };
 
-var main = function () {
-  var _ref4 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee4(parent) {
+var main = /*#__PURE__*/function () {
+  var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(parent) {
     var _context15;
 
     var url, name, csv, head, filter, tbl, data;
@@ -1098,7 +1098,7 @@ var showTable = function showTable(p, csv, sfilter, sortidx, sortorder) {
   p.appendChild(tbl);
 };
 
-var CSVViewer = function (_HTMLElement) {
+var CSVViewer = /*#__PURE__*/function (_HTMLElement) {
   (0, _inherits2.default)(CSVViewer, _HTMLElement);
 
   var _super = _createSuper(CSVViewer);
@@ -1115,8 +1115,8 @@ var CSVViewer = function (_HTMLElement) {
       subtree: false
     };
 
-    var callback = function () {
-      var _ref5 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee5(mlist, observer) {
+    var callback = /*#__PURE__*/function () {
+      var _ref5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5(mlist, observer) {
         return _regenerator.default.wrap(function _callee5$(_context20) {
           while (1) {
             switch (_context20.prev = _context20.next) {
@@ -1151,11 +1151,12 @@ var CSVViewer = function (_HTMLElement) {
   }
 
   return CSVViewer;
-}((0, _wrapNativeSuper2.default)(HTMLElement));
+}( /*#__PURE__*/(0, _wrapNativeSuper2.default)(HTMLElement));
 
 if (window.customElements) {
   customElements.define("csv-viewer", CSVViewer);
 }
+
 var cv = new CSVViewer();
 cv.setAttribute("src", "./test.csv");
 document.body.appendChild(cv);
@@ -1393,15 +1394,8 @@ var _indexOfInstanceProperty = require("@babel/runtime-corejs3/core-js/instance/
 
 function _isNativeFunction(fn) {
   var _context;
-  console.log("isnative", fn, Function);
-  try {
-    console.log(_indexOfInstanceProperty);
-    console.log(Function.toString.call(fn));
-    return _indexOfInstanceProperty(_context = Function.toString.call(fn)).call(_context, "[native code]") !== -1;
-  } catch (e) {
-    console.log(e);
-  }
-  return true;
+
+  return _indexOfInstanceProperty(_context = Function.toString.call(fn)).call(_context, "[native code]") !== -1;
 }
 
 module.exports = _isNativeFunction;

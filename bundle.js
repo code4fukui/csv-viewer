@@ -899,7 +899,9 @@ class CSVViewer extends HTMLElement {
         startObserver();
     }
 }
-customElements.define("csv-viewer", CSVViewer);
+if (window.customElements) {
+    customElements.define("csv-viewer", CSVViewer);
+}
 const cv = new CSVViewer();
 cv.setAttribute("src", "./test.csv");
 document.body.appendChild(cv);

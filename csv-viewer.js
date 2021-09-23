@@ -244,6 +244,8 @@ class CSVViewer extends HTMLElement {
   }
 }
 
-customElements.define("csv-viewer", CSVViewer);
+if (window.customElements) {
+  customElements.define("csv-viewer", CSVViewer);
+}
 
 export { CSVViewer }
