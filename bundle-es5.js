@@ -1391,7 +1391,7 @@ var _indexOfInstanceProperty = require("@babel/runtime-corejs3/core-js/instance/
 
 function _isNativeFunction(fn) {
   var _context;
-
+  console.log("isnative", fn, Function);
   return _indexOfInstanceProperty(_context = Function.toString.call(fn)).call(_context, "[native code]") !== -1;
 }
 
