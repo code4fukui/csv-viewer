@@ -362,8 +362,8 @@ CSV.fromJSON = function (json) {
   return res;
 };
 
-CSV.fetchOrLoad = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(fn) {
+CSV.fetchOrLoad = function () {
+  var _ref = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee(fn) {
     return _regenerator.default.wrap(function _callee$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -405,8 +405,8 @@ CSV.fetchOrLoad = /*#__PURE__*/function () {
   };
 }();
 
-CSV.fetchUtf8 = /*#__PURE__*/function () {
-  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(url) {
+CSV.fetchUtf8 = function () {
+  var _ref2 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee2(url) {
     var data, csv;
     return _regenerator.default.wrap(function _callee2$(_context3) {
       while (1) {
@@ -437,8 +437,8 @@ CSV.fetchUtf8 = /*#__PURE__*/function () {
   };
 }();
 
-CSV.fetch = /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(url) {
+CSV.fetch = function () {
+  var _ref3 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee3(url) {
     var data, csv;
     return _regenerator.default.wrap(function _callee3$(_context4) {
       while (1) {
@@ -675,7 +675,7 @@ var core = {
   reject: reject
 };
 
-var Moji = /*#__PURE__*/function () {
+var Moji = function () {
   function Moji(str1, mojisyu) {
     (0, _classCallCheck2.default)(this, Moji);
     this._str = str1;
@@ -828,8 +828,8 @@ var clear = function clear(ele) {
   return ele.innerHTML = "";
 };
 
-var main = /*#__PURE__*/function () {
-  var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(parent) {
+var main = function () {
+  var _ref4 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee4(parent) {
     var _context15;
 
     var url, name, csv, head, filter, tbl, data;
@@ -1098,7 +1098,7 @@ var showTable = function showTable(p, csv, sfilter, sortidx, sortorder) {
   p.appendChild(tbl);
 };
 
-var CSVViewer = /*#__PURE__*/function (_HTMLElement) {
+var CSVViewer = function (_HTMLElement) {
   (0, _inherits2.default)(CSVViewer, _HTMLElement);
 
   var _super = _createSuper(CSVViewer);
@@ -1115,8 +1115,8 @@ var CSVViewer = /*#__PURE__*/function (_HTMLElement) {
       subtree: false
     };
 
-    var callback = /*#__PURE__*/function () {
-      var _ref5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee5(mlist, observer) {
+    var callback = function () {
+      var _ref5 = (0, _asyncToGenerator2.default)(_regenerator.default.mark(function _callee5(mlist, observer) {
         return _regenerator.default.wrap(function _callee5$(_context20) {
           while (1) {
             switch (_context20.prev = _context20.next) {
@@ -1151,7 +1151,7 @@ var CSVViewer = /*#__PURE__*/function (_HTMLElement) {
   }
 
   return CSVViewer;
-}( /*#__PURE__*/(0, _wrapNativeSuper2.default)(HTMLElement));
+}((0, _wrapNativeSuper2.default)(HTMLElement));
 
 customElements.define("csv-viewer", CSVViewer);
 var cv = new CSVViewer();
