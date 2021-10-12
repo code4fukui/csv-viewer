@@ -7,6 +7,8 @@ const EMBED_IMAGE = true;
 const EMBED_IMAGE_W = 100; // 300;
 const EMBED_IMAGE_H = 100; // 225;
 
+const getResizedImageURL = (url, w, h) => url;
+
 const create = (tag) => document.createElement(tag);
 const clear = (ele) => ele.innerHTML = "";
 
@@ -21,7 +23,6 @@ const main = async (parent) => {
   if (parent.getAttribute("reverse") == "true") {
     const head = csv.shift();
     csv.reverse();
-    console.log("rev")
     csv.unshift(head);
   }
   const filter = create("input");
