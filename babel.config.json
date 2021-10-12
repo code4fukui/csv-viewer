@@ -11,11 +11,5 @@
   ],
   "plugins": [
     ["@babel/plugin-transform-runtime", { "corejs": 3 }]
-  ],
-  "assumptions": {
-    "constantSuper": false,
-    "noClassCalls": false,
-    "setClassMethods": false,
-    "superIsCallableConstructor": false
-  }
+  ]
 }
