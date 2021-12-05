@@ -212,7 +212,8 @@ const showTable = function (p, csv, sfilter, sortidx, sortorder) {
       } else {
         val = val.replace(/</g, "&lt;");
         val = val.replace(/>/g, "&gt;");
-        val = val.replace(/\\n/g, "<br>");
+        //val = val.replace(/\\n/g, "<br>");
+        val = val.replace(/\n/g, "<br>");
         td.innerHTML = val;
       }
       tr.appendChild(td);
