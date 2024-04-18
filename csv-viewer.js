@@ -200,8 +200,9 @@ const showTable = function (p, csv, sfilter, sortidx, sortorder) {
         const uext = val.toLowerCase();
         if (uext.endsWith(".jpg") || uext.endsWith(".jpeg") || uext.endsWith(".png") || uext.endsWith(".webp")) {
           if (EMBED_IMAGE) {
-            s = "<img src='" +
-              getResizedImageURL(val, EMBED_IMAGE_W, EMBED_IMAGE_H) + "'><br>";
+            s = "<a href=" + val + "><img src='" +
+              getResizedImageURL(val, EMBED_IMAGE_W, EMBED_IMAGE_H) + "'></a>";
+              //<br>";
             //s += "<a href=" + val + ">" + val + "</a>";
           } else {
             s += "<a href=" + val + ">" + val + "</a>";
