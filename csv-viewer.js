@@ -197,11 +197,12 @@ const showTable = function (p, csv, sfilter, sortidx, sortorder) {
         val = val.replace(/</g, "&lt;");
         val = val.replace(/>/g, "&gt;");
         //				if (val.toLowerCase().endsWith(".jpg") || val.toLowerCase().endsWith(".png")) {
-        if (val.toLowerCase().endsWith(".jpg")) {
+        const uext = val.toLowerCase();
+        if (uext.endsWith(".jpg") || uext.endsWith(".jpeg") || uext.endsWith(".png") || uext.endsWith(".webp")) {
           if (EMBED_IMAGE) {
             s = "<img src='" +
               getResizedImageURL(val, EMBED_IMAGE_W, EMBED_IMAGE_H) + "'><br>";
-            s += "<a href=" + val + ">" + val + "</a>";
+            //s += "<a href=" + val + ">" + val + "</a>";
           } else {
             s += "<a href=" + val + ">" + val + "</a>";
           }
