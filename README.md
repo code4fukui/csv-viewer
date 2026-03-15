@@ -1,5 +1,7 @@
 # csv-viewer
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A web component for displaying CSV data.
 
 ## Features
