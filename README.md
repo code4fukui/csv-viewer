@@ -34,4 +34,4 @@ You can also reverse the order of the data by adding the `reverse` attribute:
 
 ## License
 
-MIT
+MIT License — see [LICENSE](LICENSE).
