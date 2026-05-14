@@ -4,7 +4,7 @@
 
 ## デモ
 
-[**ライブデモ**](https://code4sabae.github.io/csv-viewer/)
+**ライブデモ** *(demo unavailable)*
 
 ## 機能
 

@@ -6,7 +6,7 @@ A web component for displaying CSV data with sorting, filtering, and image embed
 
 ## Demo
 
-[**Live Demo**](https://code4sabae.github.io/csv-viewer/)
+**Live Demo** *(demo unavailable)*
 
 ## Features
 
